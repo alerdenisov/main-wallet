@@ -43,6 +43,19 @@ nodes.customNodeObj = {
 	lib: null
 };
 nodes.nodeList = {
+//  mnc: {
+//		name: "MNC",
+//		blockExplorerTX: "https://etherscan.io/tx/[[txHash]]",
+//		blockExplorerAddr: "https://etherscan.io/address/[[address]]",
+//		type: nodes.nodeTypes.MNC,
+//		eip155: true,
+//		chainId: 1,
+//		tokenList: require("./tokens/mncTokens.json"),
+//		abiList: require("./abiDefinitions/mncAbi.json"),
+//		service: "etherscan.io",
+//		lib: new nodes.customNode("https://api.myetherwallet.com/eth", "")
+//		//lib: require("./nodeHelpers/etherscan")
+//	},
 	eth_mew: {
 		name: "ETH",
 		blockExplorerTX: "https://etherscan.io/tx/[[txHash]]",

@@ -4,7 +4,6 @@ var sendTxCtrl = function($scope, $sce, walletService, $rootScope) {
     $scope.signedTx
     $scope.ajaxReq = ajaxReq;
     $scope.unitReadable = ajaxReq.type;
-    console.log(ajaxReq.type);
     $scope.sendTxModal = new Modal(document.getElementById('sendTransaction'));
     walletService.wallet = null;
     walletService.password = '';
@@ -34,7 +33,8 @@ var sendTxCtrl = function($scope, $sce, walletService, $rootScope) {
         nonce: null,
         gasPrice: globalFuncs.urlGet('gasprice') == null ? null : globalFuncs.urlGet('gasprice'),
         donate: false,
-        tokensymbol: globalFuncs.urlGet('tokensymbol') == null ? false : globalFuncs.urlGet('tokensymbol'),
+        tokensymbol: globalFuncs.urlGet('tokensymbol') == null ? 'MNC' : globalFuncs.urlGet('tokensymbol'),
+        sendMode: 'token'
     }
 
 
@@ -75,7 +75,9 @@ var sendTxCtrl = function($scope, $sce, walletService, $rootScope) {
     }
 
     var defaultInit = function() {
-        globalFuncs.urlGet('sendMode') == null ? $scope.setSendMode('ether') : $scope.setSendMode(globalFuncs.urlGet('sendMode'));
+        //$sco
+        //globalFuncs.urlGet('sendMode') == null ? $scope.setTokenSendMode() : $scope.setSendMode(globalFuncs.urlGet('sendMode'));
+        
         $scope.gasLimitChanged = globalFuncs.urlGet('gaslimit') != null ? true : false;
         $scope.showAdvance = globalFuncs.urlGet('gaslimit') != null || globalFuncs.urlGet('gas') != null || globalFuncs.urlGet('data') != null;
         if (globalFuncs.urlGet('data') || globalFuncs.urlGet('value') || globalFuncs.urlGet('to') || globalFuncs.urlGet('gaslimit') || globalFuncs.urlGet('sendMode') || globalFuncs.urlGet('gas') || globalFuncs.urlGet('tokensymbol')) $scope.hasQueryString = true // if there is a query string, show an warning at top of page

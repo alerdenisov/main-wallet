@@ -1,5 +1,11 @@
 [
   {
+    "address": "0x9f0f1be08591ab7d990faf910b38ed5d60e4d5bf",
+    "symbol": "MNC",
+    "decimal": 18,
+    "type": "custom"
+  },
+  {
     "address": "0x4E84E9e5fb0A972628Cf4568c403167EF1D40431",
     "symbol": "$FFC",
     "decimal": 18,

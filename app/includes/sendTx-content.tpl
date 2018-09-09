@@ -88,7 +88,7 @@
                ng-click="dropdownAmount = !dropdownAmount"
                ng-class="dropdownEnabled ? '' : 'disabled'">
                 <strong>
-                  MNC
+                  {{unitReadable}}
                   <i class="caret"></i>
                 </strong>
             </a>
@@ -99,7 +99,7 @@
               <li>
                 <a ng-class="{true:'active'}[tx.sendMode=='ether']"
                    ng-click="setSendMode('ether')">
-                     MNC
+                    {{ajaxReq.type}}
                 </a>
               </li>
               <li ng-repeat="token in wallet.tokenObjs track by $index"
