@@ -191,7 +191,7 @@
     </span>
 
     <!-- Warning: The separators you see on the frontend are in styles/etherwallet-custom.less. If you add / change a node, you have to adjust these. Ping tayvano if you're not a CSS wizard -->
-    <!--<span class="dropdown dropdown-node" ng-cloak>
+    <span class="dropdown dropdown-node" ng-cloak>
       <a tabindex="0"
          aria-haspopup="true"
          aria-label="change node. current node {{curNode.name}} node by {{curNode.service}}"
@@ -217,7 +217,7 @@
         </li>
       </ul>
     </span>
--->
+
     </div>
   </section>
   <p class="dropdown-gas__msg"
@@ -975,7 +975,7 @@
                ng-click="dropdownAmount = !dropdownAmount"
                ng-class="dropdownEnabled ? '' : 'disabled'">
                 <strong>
-                  MNC
+                  {{unitReadable}}
                   <i class="caret"></i>
                 </strong>
             </a>
@@ -986,7 +986,7 @@
               <li>
                 <a ng-class="{true:'active'}[tx.sendMode=='ether']"
                    ng-click="setSendMode('ether')">
-                     MNC
+                    {{ajaxReq.type}}
                 </a>
               </li>
               <li ng-repeat="token in wallet.tokenObjs track by $index"
@@ -1776,7 +1776,7 @@
                ng-click="dropdownAmount = !dropdownAmount"
                ng-class="dropdownEnabled ? '' : 'disabled'">
                 <strong>
-                  MNC
+                  {{unitReadable}}
                   <i class="caret"></i>
                 </strong>
             </a>
@@ -1787,7 +1787,7 @@
               <li>
                 <a ng-class="{true:'active'}[tx.sendMode=='ether']"
                    ng-click="setSendMode('ether')">
-                     MNC
+                    {{ajaxReq.type}}
                 </a>
               </li>
               <li ng-repeat="token in wallet.tokenObjs track by $index"
@@ -5365,7 +5365,7 @@
                ng-click="dropdownAmount = !dropdownAmount"
                ng-class="dropdownEnabled ? '' : 'disabled'">
                 <strong>
-                  MNC
+                  {{unitReadable}}
                   <i class="caret"></i>
                 </strong>
             </a>
@@ -5376,7 +5376,7 @@
               <li>
                 <a ng-class="{true:'active'}[tx.sendMode=='ether']"
                    ng-click="setSendMode('ether')">
-                     MNC
+                    {{ajaxReq.type}}
                 </a>
               </li>
               <li ng-repeat="token in wallet.tokenObjs track by $index"
@@ -7163,7 +7163,7 @@
                ng-click="dropdownAmount = !dropdownAmount"
                ng-class="dropdownEnabled ? '' : 'disabled'">
                 <strong>
-                  MNC
+                  {{unitReadable}}
                   <i class="caret"></i>
                 </strong>
             </a>
@@ -7174,7 +7174,7 @@
               <li>
                 <a ng-class="{true:'active'}[tx.sendMode=='ether']"
                    ng-click="setSendMode('ether')">
-                     MNC
+                    {{ajaxReq.type}}
                 </a>
               </li>
               <li ng-repeat="token in wallet.tokenObjs track by $index"
