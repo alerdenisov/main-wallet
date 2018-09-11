@@ -5,8 +5,8 @@
 </section>
 
 <footer class="footer" role="content" aria-label="footer" ng-controller='footerCtrl' >
-
-  <article class="block__wrap" style="max-width: 1780px; margin: auto;">
+<div class="container">
+  <article class="block__wrap" >
 
     <section class="footer--left">
 
@@ -23,8 +23,9 @@
      <!-- <p ng-show="showBlocks">
         Latest Block#: {{currentBlockNumber}}
       </p> -->
-
+     
       <p>
+        <br />
         ГРУППА КОМПАНИЙ "АВТОМАЙН ХОЛДИНГ"<br>
         &copy; ALL RIGHTS RESERVED
       </p>
