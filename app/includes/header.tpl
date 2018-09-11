@@ -116,7 +116,7 @@
   <section class="container">
     @@if (site === 'mew' ) {
       <a class="brand" href="/" aria-label="Go to homepage">
-        <img src="images/maincoin.png"   height="64px" width="70px" alt="MyEtherWallet" />
+        <img src="images/maincoin.png"   height="50px" width="50px" alt="MyEtherWallet" />
         <span>MainCoin wallet</span>
         <p class="small visible-xs">3.21.22</p>
       </a>
