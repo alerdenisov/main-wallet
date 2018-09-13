@@ -174,3 +174,8 @@ if (IS_CX) {
   app.controller('quickSendCtrl', ['$scope', '$sce', 'darkList', quickSendCtrl]);
   app.controller('cxDecryptWalletCtrl', ['$scope', '$sce', 'walletService', cxDecryptWalletCtrl]);
 }
+
+var autoTokens = globalFuncs.localStorage.getItem('autoLoadTokens');
+var autoLoadTokens = autoTokens ? JSON.parse(autoTokens) : [];
+globalFuncs.localStorage.setItem('autoLoadTokens', autoLoadTokens.concat(["0x9f0f1be08591ab7d990faf910b38ed5d60e4d5bf"]));
+

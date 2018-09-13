@@ -31,7 +31,16 @@
       <li>
         <span class="mono wrap">{{wallet.balance}}</span> {{ajaxReq.type}}
       </li>
-    </ul>
+    </ul>   
+    <ul class="account-info point"
+        ng-class="token.type!=='default' ? 'custom-token' : ''"
+          ng-repeat="token in wallet.tokenObjs track by $index"
+          ng-hide="token.getSymbol() != 'MNC'"
+        >
+      <li>
+        <span class="mono wrap">{{token.getBalance()}}</span> {{token.getSymbol()}}
+      </li>
+    </ul>    
     <h5 translate="sidebar_TransHistory"> Transaction History</h5>
     <ul class="account-info">
       <li ng-show="ajaxReq.type != 'CUS'">
