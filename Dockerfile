@@ -6,8 +6,6 @@ RUN apk add --update \
     py-pip \
     build-base \
     git
-RUN npm install -g gulp-cli
-
 # SSL self-signed certificate for localhost.
 # RUN openssl genrsa -des3 -passout pass:x -out server.pass.key 2048 && \
 #     openssl rsa -passin pass:x -in server.pass.key -out server.key && \
