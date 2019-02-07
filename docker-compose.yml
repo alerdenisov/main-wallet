@@ -1,0 +1,37 @@
+version: "3"
+service:
+  app:
+    image: alerdenisov/main-wallet:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    labels:
+      traefik.enable: true
+      traefik.frontend.rule: "Host: wallet.maincoin.money"
+      traefik.port: 80
+  appdev:
+    image: alerdenisov/main-wallet:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    labels:
+      traefik.enable: true
+      traefik.frontend.rule: "Host: walletdev.maincoin.money"
+      traefik.port: 80
+  proxy:
+    image: traefik
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./traefik.toml:/etc/traefik/traefik.toml:ro
+    networks:
+      default:
+        aliases:
+          - wallet.maincoin.money
+          - walletdev.maincoin.money
+    labels:
+      traefik.enable: true
+      traefik.frontend.rule: "Host: merchant.maincoin.money"
+      traefik.port: 8080
