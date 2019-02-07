@@ -37,13 +37,15 @@
 </header>
 
 
-  <section class="container" style="min-height: 50%" ng-controller='viewCtrl'>
-
+<section
+  class="container"
+  style="min-height: calc(100vh - 350px)"
+  ng-controller="viewCtrl"
+>
   <!-- tab panes -->
 
-    <div class="tab-content" >
-
-      <main class="tab-pane block--container active"
+  <div class="tab-content">
+    <main class="tab-pane block--container active"
       ng-if="globalService.currentTab==globalService.tabs.generateWallet.id"
       ng-controller='walletGenCtrl'
       role="main"
@@ -548,10 +550,9 @@
   </article>
 </main>
 
+  </div>
 
-    </div>
-
-    <!-- /tab panes -->
+  <!-- /tab panes -->
 
   <div data-ng-repeat="alert in notifier.alerts">
   <div class="alert popup alert-{{alert.type}} animated-show-hide"
@@ -563,10 +564,7 @@
   </div>
 </div>
 
-
-
-  </section>
-
+</section>
 
 <footer>
 

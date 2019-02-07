@@ -517,10 +517,12 @@
 
 <br />
 
-<section class="container" style="min-height: 50%" ng-controller='viewCtrl'>
-
-  <div class="tab-content" >
-
+<section
+  class="container"
+  style="min-height: calc(100vh - 350px)"
+  ng-controller="viewCtrl"
+>
+  <div class="tab-content">
     <!-- My Wallet Page -->
 <main class="tab-pane active myWalletCtrl" ng-if="globalService.currentTab==globalService.tabs.myWallet.id" ng-controller='myWalletsCtrl'  ng-cloak>
   <div class="mywallet-container">
@@ -969,9 +971,7 @@
   <!--/ Remove modal-->
 </main>
 <!-- / My Wallet Page -->
-
-
-    <main class="tab-pane active"
+ <main class="tab-pane active"
       ng-if="globalService.currentTab==globalService.tabs.addWallet.id"
       ng-controller='addWalletCtrl'
       ng-cloak>
@@ -1651,9 +1651,7 @@
   </article>
 
 </main>
-
-
-    <main class="tab-pane active"
+ <main class="tab-pane active"
       ng-if="globalService.currentTab==globalService.tabs.sendTransaction.id"
       ng-controller='sendTxCtrl'
       ng-cloak >
@@ -2199,9 +2197,7 @@
 
 
 </main>
-
-
-    <!-- Swap Page -->
+ <!-- Swap Page -->
 <main class="tab-pane swap-tab active" ng-if="globalService.currentTab==globalService.tabs.swap.id"
       ng-controller="swapCtrl" ng-cloak>
 
@@ -3947,9 +3943,7 @@
 
 </main>
 <!-- / Swap Page -->
-
-
-    <main class="tab-pane active"
+ <main class="tab-pane active"
       ng-if="globalService.currentTab==globalService.tabs.offlineTransaction.id"
       ng-controller='offlineTxCtrl'
       ng-cloak>
@@ -4340,9 +4334,7 @@
  
 
 </main>
-
-
-    <main class="tab-pane contracts active" ng-if="globalService.currentTab==globalService.tabs.contracts.id" ng-controller='contractsCtrl' ng-cloak>
+ <main class="tab-pane contracts active" ng-if="globalService.currentTab==globalService.tabs.contracts.id" ng-controller='contractsCtrl' ng-cloak>
 
   <!-- Title -->
   <div class="block text-center">
@@ -4914,9 +4906,7 @@
   </article>
 
 </main>
-
-
-    <main class="tab-pane ens-tab active" ng-if="globalService.currentTab==globalService.tabs.ens.id" ng-controller='ensCtrl' ng-cloak>
+ <main class="tab-pane ens-tab active" ng-if="globalService.currentTab==globalService.tabs.ens.id" ng-controller='ensCtrl' ng-cloak>
       <!-- Title -->
   <div class="block text-center">
     <h1>
@@ -6591,9 +6581,7 @@
   </div>
 
 </main>
-
-
-    <main class="tab-pane domainsale-tab active" ng-if="globalService.currentTab==globalService.tabs.domainsale.id" ng-controller='domainsaleCtrl' ng-cloak>
+ <main class="tab-pane domainsale-tab active" ng-if="globalService.currentTab==globalService.tabs.domainsale.id" ng-controller='domainsaleCtrl' ng-cloak>
 
   <div class="block">
 
@@ -7476,9 +7464,7 @@
 
  
 </main>
-
-
-    <main class="tab-pane block--container active" ng-if="globalService.currentTab==globalService.tabs.txStatus.id" ng-controller='txStatusCtrl' role="main" ng-cloak>
+ <main class="tab-pane block--container active" ng-if="globalService.currentTab==globalService.tabs.txStatus.id" ng-controller='txStatusCtrl' role="main" ng-cloak>
 
   <!-- Section 1 -->
   <section class="block txstatus__1">
@@ -8228,9 +8214,7 @@
       {{ txInfo.from }}
     </div>
   </section>
-
-
-    <!-- print -->
+ <!-- print -->
 <div class="tab-pane" id="panePrint" style="display: none;">
   <div class="print-container">
     <span id="printwalletjson" style="display: none;"></span>
@@ -8266,7 +8250,6 @@
 </div>
 <!-- /print -->
 
-
   </div>
 
   <div data-ng-repeat="alert in notifier.alerts">
@@ -8279,13 +8262,6 @@
   </div>
 </div>
 
-
-</section>
-
-<section class="pre-footer">
-  <div class="container">
-    <p></p>
-  </div>
 </section>
 
 <footer class="footer" role="content" aria-label="footer" ng-controller='footerCtrl' >
@@ -8316,15 +8292,24 @@
 
     </section>
     <section class="footer--cent">
-      <div class="footer__pill-wrap">
-        <h4 class="widget_title">Партнеры проекта</h4>
-        <a target="_blank" href="https://avtomain.com" title="АВТОМАЙН ПРОФИТ ИНВЕСТ">Автомайн Профит Инвест</a><br>
-        <a class="" target="_blank" href="https://avtomain.com" title="АВТОМАЙН ИНВЕСТ ФОНД">Автомайн Инвест Фонд</a><br>
-        <a class="" target="_blank" href="https://avtomain.biz" title="АВТОМАЙН БИЗНЕС">Автомайн Бизнес</a><br>
-        <a class="" target="_blank" href="https://avtomain.taxi" title="АВТОМАЙН ТАКСИ">Автомайн Такси</a><br>
-        <a class="" target="_blank" href="https://avtomain-bestchange.com" title="АВТОМАЙН BESTCHANGE">Автомайн Bestchange</a><br>
-          <a class="" target="_blank" href="https://avtomain.world" title="БФ АВТОМАЙН МИР">БФ Автомайн Мир</a><br>
-      </div>
+      <h4 class="widget_title">Maincoin Exchange</h4>
+      
+      <article class="footer__link-row" >
+        <div class="footer__link-column">
+          <a target="_blank" href="https://exmo.me" title="EXMO Exchange">Exmo</a><br>
+          <a target="_blank" href="https://p2pb2b.io" title="P2PB2B">P2PB2B</a><br>
+          <a target="_blank" href="https://livecoin.net" title="Livecoin">Livecoin</a><br>
+          <a target="_blank" href="https://www.bikicoin.pro/index" title="Bikicoin">Bikicoin</a><br>
+          <a target="_blank" href="https://exrates.me/dashboard" title="Exrates Exchange">Exrates</a><br>
+        </div>
+        <div class="footer__link-column">
+          <a target="_blank" href="https://deex.exchange/market/MAINCOIN_DEEX.ETH" title="DEEX Exchange">DEEX</a><br>
+          <a target="_blank" href="https://btc-alpha.com/exchange/MNC_USD" title="BTC Alpha">BTC Alpha</a><br>
+          <a target="_blank" href="https://bitfex.trade/ru/MNC/BTC" title="BITFEX">BITFEX</a><br>
+          <a target="_blank" href="https://alterdice.com" title="Alterdice">Alterdice</a><br>
+          <a target="_blank" href="https://localtrade.cc" title="Localtrade">Localtrade</a><br>
+        </div>
+      </article>
     </section> 
    <!--  <section class="footer--righ">
     <div class="footer__pill-wrap">
