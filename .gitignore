@@ -15,5 +15,6 @@ _ens/
 cert.pem
 key.pem
 .idea/
-
+chrome-extension/
+dist/
 /nbproject/private/
