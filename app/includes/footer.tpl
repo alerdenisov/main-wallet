@@ -3,7 +3,6 @@
   <article class="block__wrap" >
 
     <section class="footer--left">
-
       <a href="/"><img src="images/maincoin.png" height="45px"  alt="Ether Wallet" class="footer--logo"/> <span>&copy; 2018 MainCoin wallet </span> </a>
     <!--
       <p>
@@ -20,7 +19,7 @@
      
       <p>
         <br />
-        ГРУППА КОМПАНИЙ "АВТОМАЙН ХОЛДИНГ"<br>
+        MAINCOIN MONEY LTD<br>
         &copy; ALL RIGHTS RESERVED
       </p>
 
@@ -42,6 +41,18 @@
           <a target="_blank" href="https://bitfex.trade/ru/MNC/BTC" title="BITFEX">BITFEX</a><br>
           <a target="_blank" href="https://alterdice.com" title="Alterdice">Alterdice</a><br>
           <a target="_blank" href="https://localtrade.cc" title="Localtrade">Localtrade</a><br>
+        </div>
+        <div class="footer__link-column">
+          <a target="_blank" href="https://www.bw.com/" title="BW Exchange">BW</a><br>
+          <a target="_blank" href="https://www.fubt.com/#/home" title="Fubt">Fubt</a><br>
+          <a target="_blank" href="https://www.stex.com/" title="Stex">Stex</a><br>
+          <a target="_blank" href="https://www.dobiexchange.com/" title="DOBI">DOBI</a><br>
+          <a target="_blank" href="https://www.bitker.com/" title="Bitker">Bitker</a><br>
+        </div>
+        <div class="footer__link-column">
+          <a target="_blank" href="https://bit.ly/2TPd1kA" title="Latoken Exchange">Latoken</a><br>
+          <a target="_blank" href="https://mercatox.com/" title="Merkatox">Merkatox</a><br>
+          <a target="_blank" href="https://sistemkoin.com/" title="Sistemkoin">Sistemkoin</a><br>
         </div>
       </article>
     </section> 
